@@ -93,16 +93,7 @@ pipeline {
                 sh 'npx codeceptjs run --steps'
 			}
 		}
-		stage('Deploy to DEV') {
-            when {
-				expression {
-					env.BRANCH_NAME == 'develop'
-				}
-            }
-            steps {
-				//deploy(env.GCP_PROJECT, env.TARGET_WORKSPACE, env.ENV_NAME, env.SA_DIR)
-            }
-        }
+
         stage('docker-compose') {
            steps {
               sh "docker-compose build"
