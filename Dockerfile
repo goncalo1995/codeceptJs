@@ -2,7 +2,7 @@ FROM google/cloud-sdk:alpine
 
 ENV HOME /tmp
 
-RUN apk add --update nodejs npm yarn
+RUN apk add --update nodejs npm yarn docker-compose
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn
