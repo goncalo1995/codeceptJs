@@ -1,8 +1,7 @@
 FROM google/cloud-sdk:alpine
 
 ENV HOME /tmp
-RUN apk add --update nodejs npm yarn
-RUN apt-get install docker-compose
+RUN apk add --update nodejs npm yarn codeceptjs playwright
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn
