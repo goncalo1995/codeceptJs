@@ -12,7 +12,12 @@ exports.config = {
       url: 'https://storage.googleapis.com/bk-oscarcore-dev/PR_SomosCaixa_CartaoCaixaIN.mht_Files/Caixa-in.aspx.htm',
       show: false,
       browser: 'chromium',
-      waitForNavigation: "networkidle0"
+      waitForNavigation: "networkidle0",
+      desiredCapabilities: {
+        chromeOptions: {
+          args: ["--headless", "--disable-gpu", "--no-sandbox"]
+        }
+      }
     }
   },
   include: {
