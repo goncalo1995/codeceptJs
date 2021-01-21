@@ -1,8 +1,8 @@
-FROM google/cloud-sdk:alpine
+FROM codeception/codeceptjs
 
-ENV HOME /tmp
+RUN npm i codeceptjs-puppeteer
 
-RUN apk add --update nodejs npm yarn
+RUN ln -sf /codecept/bin/codecept.js /usr/local/bin/codeceptjs
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn

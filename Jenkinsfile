@@ -82,10 +82,10 @@ pipeline {
 		/*
 		 * Run yarn build script to compile the sdk
 		 */
-		stage('Build') {
+		stage('Running tests') {
 			steps {
                 //sh 'npx create-codeceptjs .'
-                sh 'npm install codeceptjs playwright --save'
+                sh 'codeceptjs run'
 				//sh 'npm install'
 			}
 		}
