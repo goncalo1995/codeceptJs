@@ -85,7 +85,8 @@ pipeline {
 		stage('Build') {
 			steps {
                 //sh 'npx create-codeceptjs .'
-				sh 'npm install'
+                sh 'npm install codeceptjs playwright --save'
+				//sh 'npm install'
 			}
 		}
         stage('Run UI Test') {
