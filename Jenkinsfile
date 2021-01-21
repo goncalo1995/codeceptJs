@@ -84,7 +84,8 @@ pipeline {
 		 */
 		stage('Build') {
 			steps {
-				sh 'npm install'
+                sh 'npx create-codeceptjs .'
+				//sh 'npm install'
 			}
 		}
         stage('Run UI Test') {
