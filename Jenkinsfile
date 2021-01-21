@@ -94,9 +94,4 @@ pipeline {
 			}
 		}
     }
-    post {
-      always {
-         sh "/usr/local/bin/docker-compose down || true"
-      }
-   }
 }

@@ -2,7 +2,7 @@ FROM google/cloud-sdk:alpine
 
 ENV HOME /tmp
 
-RUN apk add --update nodejs npm yarn codeceptjs
+RUN apk add --update nodejs npm yarn
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn
