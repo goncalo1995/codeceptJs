@@ -10,7 +10,7 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://storage.googleapis.com/bk-oscarcore-dev/PR_SomosCaixa_CartaoCaixaIN.mht_Files/Caixa-in.aspx.htm',
-      show: true,
+      show: false,
       browser: 'chromium',
       waitForNavigation: "networkidle0"
     }

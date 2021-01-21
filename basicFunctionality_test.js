@@ -10,7 +10,7 @@ Scenario('website looks nice on iPhone', () => {
   });
 */
 
-Scenario('test openning chatbot', ({ I }) => {
+Scenario('Default chromium', ({ I }) => {
     I.amOnPage('https://storage.googleapis.com/bk-oscarcore-dev/PR_SomosCaixa_CartaoCaixaIN.mht_Files/Caixa-in.aspx.htm');
     I.waitForVisible("#chat");
     I.click("#chat");
@@ -34,7 +34,9 @@ Scenario('test openning chatbot', ({ I }) => {
     /*within('#scrollContainer', () => {
         I.seeNumberOfElements('.row', 5);
       });*/
-    pause();
+    
+    
+    //  pause();
 });
 
 
