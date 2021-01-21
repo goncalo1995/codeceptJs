@@ -79,13 +79,19 @@ pipeline {
 	}
 
     stages {
+        stage('docker-compose') {
+           steps {
+              sh "docker-compose build"
+              sh "docker-compose up -d"
+           }
+       }
 		/*
 		 * Run yarn build script to compile the sdk
 		 */
 		stage('Build') {
 			steps {
-                sh 'npx create-codeceptjs .'
-				//sh 'npm install'
+                //sh 'npx create-codeceptjs .'
+				sh 'npm install'
 			}
 		}
         stage('Run UI Test') {
@@ -96,8 +102,7 @@ pipeline {
     }
     post {
       always {
-          sh 'clearing things'
-         //sh "docker-compose down || true"
+         sh "docker-compose down || true"
       }
    }
 }
