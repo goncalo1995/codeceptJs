@@ -79,13 +79,6 @@ pipeline {
 	}
 
     stages {
-        stage('docker-compose') {
-           steps {
-              sh 'sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
-              sh "/usr/local/bin/docker-compose build"
-              sh "/usr/local/bin/docker-compose up -d"
-           }
-       }
 		/*
 		 * Run yarn build script to compile the sdk
 		 */
