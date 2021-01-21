@@ -1,8 +1,8 @@
 FROM codeception/codeceptjs
 
-RUN npm i codeceptjs-puppeteer
+ENV HOME /tmp
 
-RUN ln -sf /codecept/bin/codecept.js /usr/local/bin/codeceptjs
+RUN apk add --update nodejs npm yarn
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn
