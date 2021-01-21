@@ -1,8 +1,8 @@
 FROM codeception/codeceptjs
 
-ENV HOME /tmp
+RUN npm install codeceptjs playwright --save
 
-RUN apk add --update nodejs npm yarn
+RUN ln -sf /codecept/bin/codecept.js /usr/local/bin/codeceptjs
 
 #ENV HOME /tmp
 #RUN apk add --update nodejs npm yarn
